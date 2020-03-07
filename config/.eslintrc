@@ -23,7 +23,6 @@
         "react"
     ],
     "extends": [
-        "angular",
         "eslint:recommended",
         "plugin:react/recommended"
     ],

@@ -3,11 +3,11 @@ set laststatus=2
 
 " https://github.com/vim-airline/vim-airline/wiki/FAQ#i-have-a-performance-problem
 
-"let g:airline_theme = 'zenburn'
-"let g:airline_theme = 'sol'
-"let g:airline_theme = 'silver'
-"let g:airline_theme = 'papercolor'  " This doesn't highlight the current tab
-"let g:airline_theme = 'kalisi'
+" let g:airline_theme = 'zenburn'
+" let g:airline_theme = 'sol'
+" let g:airline_theme = 'silver'
+" let g:airline_theme = 'papercolor'  " This doesn't highlight the current tab
+" let g:airline_theme = 'kalisi'
 " let g:airline_theme = 'bubblegum'
 let g:airline_theme = 'gruvbox'
 
@@ -37,6 +37,7 @@ let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#virtualenv#enabled = 1
 " let g:airline#extensions#ale#enabled = 1
 " let g:airline#extensions#ycm#enabled = 1
+let g:airline#extensions#coc#enabled = 1
 
 let g:airline_mode_map = {
     \ '__' : '-',
@@ -64,6 +65,7 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
 " Hack Nerd Font
 " let g:airline_symbols.branch = ''
 " let g:airline_symbols.branch = '  '
@@ -73,53 +75,3 @@ endif
 " number being displayed with extra numbers.
 " let g:airline_symbols.dirty=⚡
 let g:airline_symbols.dirty='✳'
-
-" if fontdetect#hasFontFamily("Hack Nerd Font")
-"     if !exists('g:airline_symbols')
-"         let g:airline_symbols = {}
-"     endif
-"     let g:airline_symbols.branch = ''
-" endif
-
-" if has('gui_running')
-"     if !fontdetect#hasFontFamily("Hack Nerd Font")
-"         let g:airline_symbols.branch = ''  " Powerline
-"     endif
-" endif
-
-" if has('gui_running')
-"     let g:airline_powerline_fonts = 1
-" else
-"     " Unicode symbols
-"     " let g:airline_left_sep = '»'
-"     " let g:airline_left_sep = '▶'
-"     " let g:airline_left_sep = '►'
-"     let g:airline_left_sep = ''
-
-"     " let g:airline_right_sep = '«'
-"     " let g:airline_right_sep = '◀'
-"     " let g:airline_right_sep = '◄'
-"     let g:airline_right_sep = ''
-
-"     let g:airline_left_alt_sep = ''
-"     let g:airline_right_alt_sep = ''
-
-"     if !exists('g:airline_symbols')
-"         let g:airline_symbols = {}
-"     endif
-"     " let g:airline_symbols.branch = ''  " Powerline
-"     " let g:airline_symbols.branch = '⎇'
-"     " let g:airline_symbols.branch = ' '
-"     let g:airline_symbols.branch = ''
-"     let g:airline_symbols.crypt = '🔒'
-"     " let g:airline_symbols.linenr = '␊'
-"     " let g:airline_symbols.linenr = '␤'
-"     " let g:airline_symbols.linenr = '¶'
-"     " let g:airline_symbols.linenr = ''  " Powerline
-"     let g:airline_symbols.linenr = '☰'  " Powerline
-"     " let g:airline_symbols.paste = 'Þ'
-"     " let g:airline_symbols.paste = '∥'
-"     let g:airline_symbols.paste = 'ρ'
-"     let g:airline_symbols.readonly = ''  " Powerline
-"     let g:airline_symbols.whitespace = 'Ξ'
-" endif
