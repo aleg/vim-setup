@@ -24,4 +24,4 @@ VIM_CMD='vim'
 
 # Installing the plugins (using the default color scheme, because at this point
 # the color schemes are not yet installed)
-$VIM_CMD --cmd 'let force_default_scheme = 1' +PluginClean! +PluginInstall +qall
+$VIM_CMD --cmd 'let force_default_scheme = 1' +PlugClean! +PlugUpdate! +qall

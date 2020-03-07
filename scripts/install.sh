@@ -23,9 +23,6 @@ then
     exit 1
 fi
 
-# Updating submodule (Vundle).
-git submodule update --init --recursive
-
 # Copying .vimrc into the home directory, 
 # cleaning the unused plugins and installing the new ones.
 . scripts/sync.sh

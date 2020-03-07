@@ -1,91 +1,94 @@
 "-----------------------------------------------------------------------
-" Vundle
+" Plug - Plugin manager.
 "-----------------------------------------------------------------------
-set nocompatible  " required
-filetype off  " required
+" set nocompatible  " required
+" filetype off  " required
 
-" Set the runtime path to include Vundle and initialize.
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Automatic installation.
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/bundle')
 
 "-----------------------------------------------------------------------
 " PLUGINS
 "-----------------------------------------------------------------------
 
-" Let Vundle manage Vundle, required.
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Useful.
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'wincent/loupe'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-surround'
-Plugin 'tmhedberg/SimpylFold'  " slow on large files (115_cache)
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Yggdroot/indentLine'
+Plug 'scrooloose/nerdcommenter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'wincent/loupe'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Yggdroot/indentLine'
 
-" Text objects.
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-line'
-Plugin 'whatyouhide/vim-textobj-xmlattr'
+" Generic text objects.
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
 
-" REPL
-" Plugin 'metakirby5/codi.vim'
-" Plugin 'jpalardy/vim-slime'
+" REPL (Read–eval–print loop).
+" Plug 'metakirby5/codi.vim'
+" Plug 'jpalardy/vim-slime'
 
 " Search.
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'jremmen/vim-ripgrep'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'jremmen/vim-ripgrep'
 
 " Snippets.
-" Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 
 " Python.
-Plugin 'Vimjas/vim-python-pep8-indent'  " slow on large files (120_find_opening_paren or 120__skip_special_chars)
-Plugin 'vim-python/python-syntax'
-Plugin 'heavenshell/vim-pydocstring'
-Plugin 'bps/vim-textobj-python'
+Plug 'Vimjas/vim-python-pep8-indent'  " slow on large files (120_find_opening_paren or 120__skip_special_chars)
+Plug 'vim-python/python-syntax'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'tmhedberg/SimpylFold'  " slow on large files (115_cache)
+Plug 'bps/vim-textobj-python'
 
 " Git.
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Navigation
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
 
 " HTML
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
+Plug 'whatyouhide/vim-textobj-xmlattr'
 
 " CSS
-" Plugin 'tpope/vim-haml'  " SASS
-" Plugin 'ap/vim-css-color'  " slow on large files (126_create_matches)
+" Plug 'tpope/vim-haml'  " SASS
+" Plug 'ap/vim-css-color'  " slow on large files (126_create_matches)
 
 " JavaScript
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'heavenshell/vim-jsdoc'
-" Plugin 'epilande/vim-react-snippets'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'mxw/vim-jsx'
+Plug 'heavenshell/vim-jsdoc'
+" Plug 'epilande/vim-react-snippets'
 
 " JSON (allows to show `""` using `vim_json_syntax_conceal`).
-Plugin 'elzr/vim-json'
+Plug 'elzr/vim-json'
 
 " Status/tabline.
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " Themes
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " Go
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
 
-" All the Plugins must be added before the following lines:
-call vundle#end()  " required
-filetype plugin indent on  " required
+" filetype plugin indent on  " required
