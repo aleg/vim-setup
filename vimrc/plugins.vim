@@ -42,9 +42,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'jremmen/vim-ripgrep'
 
-" Snippets.
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
+" Snippets engine. Includes `SirVer/ultisnips` and `vim-snipmate`.
+Plug 'honza/vim-snippets'
 
 " Python.
 Plug 'Vimjas/vim-python-pep8-indent'  " slow on large files (120_find_opening_paren or 120__skip_special_chars)
@@ -53,13 +52,16 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'tmhedberg/SimpylFold'  " slow on large files (115_cache)
 Plug 'bps/vim-textobj-python'
 
-" Git.
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+" Go
+Plug 'fatih/vim-go'
 
-" Navigation
-Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'mxw/vim-jsx'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'grvcoelho/vim-javascript-snippets'
+Plug 'epilande/vim-react-snippets'
 
 " HTML
 Plug 'mattn/emmet-vim'
@@ -69,24 +71,22 @@ Plug 'whatyouhide/vim-textobj-xmlattr'
 " Plug 'tpope/vim-haml'  " SASS
 " Plug 'ap/vim-css-color'  " slow on large files (126_create_matches)
 
-" JavaScript
-Plug 'pangloss/vim-javascript'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'mxw/vim-jsx'
-Plug 'heavenshell/vim-jsdoc'
-" Plug 'epilande/vim-react-snippets'
-
 " JSON (allows to show `""` using `vim_json_syntax_conceal`).
 Plug 'elzr/vim-json'
+
+" Git.
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Navigation
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
 
 " Status/tabline.
 Plug 'vim-airline/vim-airline'
 
 " Themes
 Plug 'morhetz/gruvbox'
-
-" Go
-Plug 'fatih/vim-go'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

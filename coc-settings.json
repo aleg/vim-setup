@@ -39,6 +39,11 @@
     },
     "suggest.removeDuplicateItems": true,
     "suggest.snippetIndicator": " \ue796",
+    "snippets.extends": {
+        "javascriptreact": ["javascript"],
+        "typescriptreact": ["javascript"],
+        "typescript": ["javascript"]
+    },
     "eslint.run": "onSave",
     "python.formatting.provider": "none",
     "python.jediEnabled": false,
