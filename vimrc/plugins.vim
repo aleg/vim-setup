@@ -19,6 +19,23 @@ call plug#begin('~/.vim/bundle')
 "-----------------------------------------------------------------------
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc-tsserver', {'do': 'npm i'}
+" Plug 'neoclide/coc-prettier', {'do': 'npm i'}
+" Plug 'neoclide/coc-python', {'do': 'npm i'}
+" Plug 'neoclide/coc-json', {'do': 'npm i'}
+" Plug 'neoclide/coc-html', {'do': 'npm i'}
+" Plug 'neoclide/coc-css', {'do': 'npm i'}
+" Plug 'neoclide/coc-yaml', {'do': 'npm i'}
+" Plug 'neoclide/coc-highlight', {'do': 'npm i'}
+" Plug 'neoclide/coc-emmet', {'do': 'npm i'}
+" Plug 'neoclide/coc-snippets', {'do': 'npm i'}
+" Plug 'neoclide/coc-tabnine', {'do': 'npm i'}
+" Plug 'neoclide/coc-eslint', {'do': 'npm i'}
+" Plug 'neoclide/coc-vimlsp', {'do': 'npm i'}
+" Plug 'neoclide/coc-sql', {'do': 'npm i'}
+
+" Protobuf
+" Plug 'uarun/vim-protobuf'
 
 " Useful.
 Plug 'scrooloose/nerdcommenter'
@@ -28,6 +45,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Yggdroot/indentLine'
+Plug 'machakann/vim-highlightedyank'
 
 " Generic text objects.
 Plug 'kana/vim-textobj-user'
@@ -48,7 +66,7 @@ Plug 'honza/vim-snippets'
 " Python.
 Plug 'Vimjas/vim-python-pep8-indent'  " slow on large files (120_find_opening_paren or 120__skip_special_chars)
 Plug 'vim-python/python-syntax'
-Plug 'heavenshell/vim-pydocstring'
+" Plug 'heavenshell/vim-pydocstring'
 Plug 'tmhedberg/SimpylFold'  " slow on large files (115_cache)
 Plug 'bps/vim-textobj-python'
 
@@ -57,8 +75,11 @@ Plug 'fatih/vim-go'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
+" Plug 'peitalin/vim-jsx-typescript'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'grvcoelho/vim-javascript-snippets'
 Plug 'epilande/vim-react-snippets'
