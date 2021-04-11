@@ -1,6 +1,6 @@
 {
     "coc.preferences.jumpCommand": "tab drop",
-    "coc.preferences.formatOnSaveFiletypes": ["python", "javascriptreact", "typescriptreact", "javascript"],
+    "coc.preferences.formatOnSaveFiletypes": ["python", "javascriptreact", "typescriptreact", "typescript", "javascript"],
     "----coc.preferences.formatOnTypeFiletypes": ["python", "javascriptreact", "typescriptreact", "javascript"],
     "coc.preferences.formatOnType": false,
     "diagnostic.checkCurrentLine": false,
@@ -47,10 +47,14 @@
     "eslint.run": "onSave",
     "python.formatting.provider": "none",
     "python.jediEnabled": false,
+    "----python.sortImports.path": "${env.HOME}/.pyenv/shims/isort",
+    "python.sortImports.path": "isort",
+    "----python.sortImports.args": ["-sp", "~/.isort.cfg"],
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-    "python.venvPath": "~/.pyenv",
+    "----python.venvPath": "~/.pyenv",
+    "----pyright.organizeimports.provider": "isort",
     "javascript.format.enabled": true,
     "typescript.format.enabled": true,
     "languageserver": {
