@@ -120,7 +120,7 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Run Prettier (needs `coc-prettier`).
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -169,6 +169,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Extensions.
 " \'coc-ultisnips',
 " \'https://github.com/andys8/vscode-jest-snippets',
+" \'coc-go',
+" \'coc-pyright',  " breaks isort
+" \'coc-python',
 let g:coc_global_extensions = [
     \'coc-tsserver',
     \'coc-prettier',
@@ -183,4 +186,5 @@ let g:coc_global_extensions = [
     \'coc-tabnine',
     \'coc-eslint',
     \'coc-vimlsp',
+    \'coc-sql'
 \]
