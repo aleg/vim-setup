@@ -37,9 +37,9 @@ endfunction
 " Enable spell check for commit messages
 if has("autocmd")
     " autocmd FileType javascript,python,gitcommit setlocal spell spelllang=en_gb
-    autocmd FileType python,go,javascript,gitcommit,yaml,markdown setlocal spell spelllang=en_gb
-    autocmd FileType python,go,javascript,gitcommit,yaml,markdown nnoremap <leader>fls :call FixLastSpellingError()<CR>
-    autocmd FileType python,go,javascript,gitcommit,yaml,markdown nnoremap <leader>fns :call FixNextSpellingError()<CR>
+    autocmd FileType Python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown setlocal spell spelllang=en_gb
+    autocmd FileType Python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown nnoremap <leader>fls :call FixLastSpellingError()<CR>
+    autocmd FileType Python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown nnoremap <leader>fns :call FixNextSpellingError()<CR>
 endif
 
 " nnoremap <leader>fls :call FixLastSpellingError()<CR>
@@ -48,6 +48,8 @@ endif
 " Buffers.
 nnoremap <leader>bg :tabnew<CR>:b#<CR>
 nnoremap <leader>bc :tabnew<CR>:b#<CR>:tabprev<CR>
+nnoremap <leader>bp :bprevious<CR>
+nnoremap <leader>bn :bnext<CR>
 
 " Default `updatetime` is 4000.
 set updatetime=500
@@ -118,7 +120,7 @@ set hlsearch
 " unsets the "last search pattern" register by hitting return
 nnoremap <leader>ls :noh<return>
 
-" Mouse and cursor.
+" Mouse.
 set mouse=a
 set gcr=a:blinkon0  " do not blink mouse on GUI vim
 " if &term =~ '^screen'
