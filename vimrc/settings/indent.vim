@@ -11,3 +11,6 @@ let g:indentLine_fileTypeExclude = ['help', 'markdown']
 "     autocmd FileType markdown let g:indentLine_enabled=0
 " endif
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
+
+" Support for tabs (i.e. Golang) doesn't use Indent:
+set list lcs=tab:\┊\ " (here is a space)
