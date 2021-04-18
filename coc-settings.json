@@ -45,6 +45,9 @@
         "typescript": ["javascript"]
     },
     "eslint.run": "onSave",
+    "----eslint.autoFixOnSave": true,
+    "----eslint.format.enable": true,
+    "----prettier.eslintIntegration": true,
     "python.formatting.provider": "none",
     "python.jediEnabled": false,
     "----python.sortImports.path": "${env.HOME}/.pyenv/shims/isort",
