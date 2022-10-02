@@ -59,3 +59,12 @@ set cursorcolumn
 " hi CursorColumn term=bold cterm=bold
 " hi CursorLine term=bold cterm=bold guibg=#555555
 " hi CursorColumn term=bold cterm=bold guibg=#555555
+
+hi clear SpellBad
+hi SpellBad cterm=underline,bold
+hi clear SpellRare
+hi SpellRare cterm=underline,bold
+hi clear SpellCap
+hi SpellCap cterm=underline,bold
+hi clear SpellLocal
+hi SpellLocal cterm=underline,bold

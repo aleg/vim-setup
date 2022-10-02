@@ -9,4 +9,5 @@
 
 " OK
 " autocmd BufWritePre,FileWritePre *.py :call CocAction('runCommand', 'editor.action.organizeImport')
-autocmd BufWritePre *.py :call CocAction('runCommand', 'editor.action.organizeImport')
+" autocmd BufWritePre *.py :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')

@@ -175,7 +175,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_global_extensions = [
     \'coc-tsserver',
     \'coc-prettier',
-    \'coc-python',
+    \'coc-pyright',
     \'coc-json',
     \'coc-html',
     \'coc-css',

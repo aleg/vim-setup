@@ -23,7 +23,6 @@ nnoremap <leader>rn :set relativenumber!<CR>
 
 " Spell check.
 " set spell spelllang=en_gb
-
 set spellfile=~/.vim/spell/techspeak.utf-8.add
 
 function! FixLastSpellingError() abort
@@ -34,16 +33,12 @@ function! FixNextSpellingError() abort
     normal! mm]s1z=`m"
 endfunction
 
-" Enable spell check for commit messages
+" Enable spell check.
 if has("autocmd")
-    " autocmd FileType javascript,python,gitcommit setlocal spell spelllang=en_gb
-    autocmd FileType Python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown setlocal spell spelllang=en_gb
-    autocmd FileType Python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown nnoremap <leader>fls :call FixLastSpellingError()<CR>
-    autocmd FileType Python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown nnoremap <leader>fns :call FixNextSpellingError()<CR>
+    autocmd FileType python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown setlocal spell spelllang=en_gb
+    autocmd FileType python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown nnoremap <leader>fls :call FixLastSpellingError()<CR>
+    autocmd FileType python,go,javascript,typescript,javascriptreact,typescriptreact,gitcommit,yaml,markdown nnoremap <leader>fns :call FixNextSpellingError()<CR>
 endif
-
-" nnoremap <leader>fls :call FixLastSpellingError()<CR>
-" nnoremap <leader>fns :call FixNextSpellingError()<CR>
 
 " Buffers.
 nnoremap <leader>bg :tabnew<CR>:b#<CR>
