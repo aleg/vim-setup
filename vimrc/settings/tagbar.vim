@@ -1,2 +1,2 @@
 " TagBar (sudo apt-get install exuberant-ctags)
-map <leader>t :TagbarToggle<CR>
+" map <leader>t :TagbarToggle<CR>

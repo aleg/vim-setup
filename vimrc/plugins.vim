@@ -100,7 +100,6 @@ Plug 'airblade/vim-gitgutter'
 
 " Navigation
 Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
 
 " Status/tabline.
 Plug 'vim-airline/vim-airline'
