@@ -66,7 +66,6 @@ Plug 'honza/vim-snippets'
 " Python.
 Plug 'Vimjas/vim-python-pep8-indent'  " slow on large files (120_find_opening_paren or 120__skip_special_chars)
 Plug 'vim-python/python-syntax'
-" Plug 'heavenshell/vim-pydocstring'
 Plug 'tmhedberg/SimpylFold'  " slow on large files (115_cache)
 Plug 'bps/vim-textobj-python'
 

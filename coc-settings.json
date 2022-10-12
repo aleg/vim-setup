@@ -58,6 +58,8 @@
     "python.linting.enabled": true,
     "----python.venvPath": "~/.pyenv",
     "pyright.organizeimports.provider": "isort",
+    "pyright.inlayHints.enable": false,
+    "pyright.testing.provider": "pytest",
     "javascript.format.enabled": true,
     "typescript.format.enabled": true,
     "languageserver": {
