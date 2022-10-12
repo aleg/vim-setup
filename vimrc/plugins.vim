@@ -19,20 +19,6 @@ call plug#begin('~/.vim/bundle')
 "-----------------------------------------------------------------------
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc-tsserver', {'do': 'npm i'}
-" Plug 'neoclide/coc-prettier', {'do': 'npm i'}
-" Plug 'neoclide/coc-python', {'do': 'npm i'}
-" Plug 'neoclide/coc-json', {'do': 'npm i'}
-" Plug 'neoclide/coc-html', {'do': 'npm i'}
-" Plug 'neoclide/coc-css', {'do': 'npm i'}
-" Plug 'neoclide/coc-yaml', {'do': 'npm i'}
-" Plug 'neoclide/coc-highlight', {'do': 'npm i'}
-" Plug 'neoclide/coc-emmet', {'do': 'npm i'}
-" Plug 'neoclide/coc-snippets', {'do': 'npm i'}
-" Plug 'neoclide/coc-tabnine', {'do': 'npm i'}
-" Plug 'neoclide/coc-eslint', {'do': 'npm i'}
-" Plug 'neoclide/coc-vimlsp', {'do': 'npm i'}
-" Plug 'neoclide/coc-sql', {'do': 'npm i'}
 
 " Protobuf
 " Plug 'uarun/vim-protobuf'
