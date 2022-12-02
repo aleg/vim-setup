@@ -192,7 +192,7 @@ nnoremap <C-h> <C-w>h
 nmap oo o<Esc>k
 nmap OO O<Esc>j
 
-" Easy way to close/save a buffer.
+" Faster way to close/save a buffer.
 nmap <leader>qq :q<CR>
 nmap <leader>qf :q!<CR>
 nmap <leader>qa :qa<CR>
@@ -210,15 +210,8 @@ nnoremap tn :tabnext<Space>
 nnoremap tm :tabm<Space>
 nnoremap td :tabclose<CR>
 
-" Tab key moves between matching brackets
-" nnoremap <tab> %
-" vnoremap <tab> %
-
 " Format json.
 map <leader>j :%!python -m json.tool<CR>
-
-" Toggles display of whitespaces.
-nmap <leader>w :set list!<CR>
 
 " Reload the .vimrc settings.
 nmap <leader>z :so $MYVIMRC<CR>
@@ -239,27 +232,7 @@ endif
 "set equalalways
 
 " Profiling
-nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
-nnoremap <silent> <leader>DP :exe ":profile pause"<cr>
-nnoremap <silent> <leader>DC :exe ":profile continue"<cr>
-nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
-
-" Remove trailing whitespace
-augroup Whitespace " {{{
-       autocmd!
-       " Remove trailing whitespace from selected filetypes {{{
-       function! <SID>StripTrailingWhitespace()
-               " Preparation: save the last search, and cursor position"
-               let _s=@/
-               let l = line(".")
-               let c = col(".")
-               " Do the business"
-               %s/\s\+$//e
-               "Clean up: restore previous search history and cursor position"
-               let @/=_s
-               call cursor(l, c)
-       endfunction
-
-       au FileType html,css,sass,javascript,php,python,ruby,sql,vim au BufWritePre <buffer> :silent! call <SID>StripTrailingWhitespace()
-       " }}}
-augroup END " }}}
+" nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
+" nnoremap <silent> <leader>DP :exe ":profile pause"<cr>
+" nnoremap <silent> <leader>DC :exe ":profile continue"<cr>
+" nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>

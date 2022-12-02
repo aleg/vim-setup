@@ -137,6 +137,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
+" TODO
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " " Mappings for CoCList
@@ -157,18 +158,24 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " " Resume latest coc list.
 " nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+let b:coc_trim_trailing_whitespace = 1
+let b:coc_trim_final_newlines = 1
+
 " Extensions.
 " \'https://github.com/andys8/vscode-jest-snippets',
+" \'coc-diagnostic',
+" \'coc-docker',
 let g:coc_global_extensions = [
     \'coc-tsserver',
     \'coc-prettier',
     \'coc-pyright',
     \'coc-json',
+    \'coc-yaml',
+    \'coc-toml',
     \'coc-html',
     \'coc-css',
-    \'coc-yaml',
-    \'coc-highlight',
     \'coc-emmet',
+    \'coc-highlight',
     \'coc-snippets',
     \'coc-tabnine',
     \'coc-eslint',

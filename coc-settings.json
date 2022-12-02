@@ -1,6 +1,7 @@
 {
     "coc.preferences.jumpCommand": "tab drop",
-    "coc.preferences.formatOnSaveFiletypes": ["python", "javascriptreact", "typescriptreact", "typescript", "javascript"],
+    "----coc.preferences.formatOnSaveFiletypes": ["python", "javascriptreact", "typescriptreact", "typescript", "javascript"],
+    "coc.preferences.formatOnSaveFiletypes": ["javascriptreact", "typescriptreact", "typescript", "javascript"],
     "----coc.preferences.formatOnTypeFiletypes": ["python", "javascriptreact", "typescriptreact", "javascript"],
     "coc.preferences.formatOnType": false,
     "diagnostic.checkCurrentLine": false,
@@ -57,6 +58,9 @@
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
     "----python.venvPath": "~/.pyenv",
+    "----python.analysis.diagnosticSeverityOverrides": {
+        "reportUnusedVariable": "warning"
+    },
     "pyright.organizeimports.provider": "isort",
     "pyright.inlayHints.enable": false,
     "pyright.testing.provider": "pytest",
