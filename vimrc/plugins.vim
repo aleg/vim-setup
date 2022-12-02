@@ -91,6 +91,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 
 " Themes
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/gruvbox-material'
 Plug 'morhetz/gruvbox'
 
 " List ends here. Plugins become visible to Vim after this call.

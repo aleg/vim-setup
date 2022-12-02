@@ -1,19 +1,7 @@
-set t_Co=256
+if get(g:, 'colour_scheme', '') == 'gruvbox' && get(g:, 'force_default_scheme', 0) == 0
+    set background=dark
+    "set background=light
 
-if get(g:, 'force_default_scheme', 0) == 0
-    " let g:solarized_termcolors=256
-    " colorscheme solarized
-    " colorscheme github
-    " colorscheme monokai
-    " colorscheme nova
-
-    " colorscheme hybrid_material
-    " let g:enable_bold_font = 1
-
-    " colorscheme seoul256
-    " let g:seoul256_background = 236
-
-    colorscheme gruvbox
     let g:gruvbox_contrast_dark = 'soft'
     let g:gruvbox_hls_cursor = 'fg0'
     " let g:gruvbox_number_column = 'fg2'
@@ -46,25 +34,12 @@ if get(g:, 'force_default_scheme', 0) == 0
     " let g:gruvbox_improved_warnings = 1
     " let g:gruvbox_guisp_fallback = 'fg'  " 'fg' or 'bg'
 
-    set background=dark
-    "set background=light
+    colorscheme gruvbox
+
+    let g:airline_theme = 'gruvbox'
+
+    " highlight CursorLine term=bold cterm=bold
+    " highlight CursorColumn term=bold cterm=bold
+    " highlight CursorLine term=bold cterm=bold guibg=#555555
+    " highlight CursorColumn term=bold cterm=bold guibg=#555555
 endif
-
-" Cursor line
-" set nocursorline
-set cursorline
-set cursorcolumn
-
-" hi CursorLine term=bold cterm=bold
-" hi CursorColumn term=bold cterm=bold
-" hi CursorLine term=bold cterm=bold guibg=#555555
-" hi CursorColumn term=bold cterm=bold guibg=#555555
-
-hi clear SpellBad
-hi SpellBad cterm=underline,bold
-hi clear SpellRare
-hi SpellRare cterm=underline,bold
-hi clear SpellCap
-hi SpellCap cterm=underline,bold
-hi clear SpellLocal
-hi SpellLocal cterm=underline,bold

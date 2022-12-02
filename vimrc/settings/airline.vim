@@ -3,14 +3,6 @@ set laststatus=2
 
 " https://github.com/vim-airline/vim-airline/wiki/FAQ#i-have-a-performance-problem
 
-" let g:airline_theme = 'zenburn'
-" let g:airline_theme = 'sol'
-" let g:airline_theme = 'silver'
-" let g:airline_theme = 'papercolor'  " This doesn't highlight the current tab
-" let g:airline_theme = 'kalisi'
-" let g:airline_theme = 'bubblegum'
-let g:airline_theme = 'gruvbox'
-
 let g:airline_skip_empty_sections = 1
 let g:airline_highlighting_cache = 1
 

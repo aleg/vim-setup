@@ -21,6 +21,10 @@ set number
 set relativenumber
 nnoremap <leader>rn :set relativenumber!<CR>
 
+" Cursor line
+set cursorline
+set cursorcolumn
+
 " Spell check.
 " set spell spelllang=en_gb
 set spellfile=~/.vim/spell/techspeak.utf-8.add
