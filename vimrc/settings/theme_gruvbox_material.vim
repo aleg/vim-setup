@@ -10,7 +10,7 @@ if get(g:, 'colour_scheme', '') == 'gruvbox-material' && get(g:, 'force_default_
     let g:gruvbox_material_better_performance = 1
     let g:gruvbox_material_disable_italic_comment = 1
     let g:gruvbox_material_spell_foreground = 'colored'
-    let g:gruvbox_material_diagnostic_line_highlight = 1
+    " let g:gruvbox_material_diagnostic_line_highlight = 1
     " let g:gruvbox_material_enable_bold = 1
 
     " Available values: 
