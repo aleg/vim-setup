@@ -227,6 +227,26 @@ if has('gui_running')
     set guioptions-=L  "remove left-hand scroll bar
 endif
 
+" Remove trailing whitespace
+augroup Whitespace " {{{
+       autocmd!
+       " Remove trailing whitespace from selected filetypes {{{
+       function! <SID>StripTrailingWhitespace()
+               " Preparation: save the last search, and cursor position"
+               let _s=@/
+               let l = line(".")
+               let c = col(".")
+               " Do the business"
+               %s/\s\+$//e
+               "Clean up: restore previous search history and cursor position"
+               let @/=_s
+               call cursor(l, c)
+       endfunction
+
+       au FileType html,css,sass,javascript,php,python,ruby,sql,vim au BufWritePre <buffer> :silent! call <SID>StripTrailingWhitespace()
+       " }}}
+augroup END " }}}
+
 " Close a split window without resizing other windows
 "set noea
 "set equalalways
