@@ -8,6 +8,10 @@ let mapleader = "\<space>"
 runtime! macros/matchit.vim
 " packadd! matchit
 
+" So that using `vim -p` is more likely to open
+" all of the listed files (default is 10).
+set tabpagemax=50
+
 " Pressing Tab on the command line will show a menu
 " to complete buffer and file names.
 set wildchar=<Tab> wildmenu wildmode=full
