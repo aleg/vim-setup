@@ -1,8 +1,8 @@
 {
     "coc.preferences.jumpCommand": "tab drop",
-    "----coc.preferences.formatOnSaveFiletypes": ["python", "javascriptreact", "typescriptreact", "typescript", "javascript"],
-    "coc.preferences.formatOnSaveFiletypes": ["javascriptreact", "typescriptreact", "typescript", "javascript"],
-    "----coc.preferences.formatOnTypeFiletypes": ["python", "javascriptreact", "typescriptreact", "javascript"],
+    "[javascriptreact][typescriptreact][typescript][javascript]": {
+        "coc.preferences.formatOnSave": true
+    },
     "coc.preferences.formatOnType": false,
     "diagnostic.checkCurrentLine": false,
     "diagnostic.level": "hint",
@@ -48,24 +48,25 @@
     "eslint.run": "onSave",
     "eslint.autoFixOnSave": true,
     "eslint.format.enable": true,
-    "prettier.eslintIntegration": true,
+    //"prettier.eslintIntegration": true,
     "python.formatting.provider": "none",
-    "----python.jediEnabled": false,
-    "----python.sortImports.path": "${env.HOME}/.pyenv/shims/isort",
-    "----python.sortImports.path": "isort",
-    "----python.sortImports.args": ["-sp", "~/.isort.cfg"],
+    //"python.jediEnabled": false,
+    //"python.sortImports.path": "${env.HOME}/.pyenv/shims/isort",
+    //"python.sortImports.path": "isort",
+    //"python.sortImports.args": ["-sp", "~/.isort.cfg"],
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-    "----python.venvPath": "~/.pyenv",
-    "----python.analysis.diagnosticSeverityOverrides": {
-        "reportUnusedVariable": "warning"
-    },
+    //"python.venvPath": "~/.pyenv",
+    //"python.analysis.diagnosticSeverityOverrides": {
+    //    "reportUnusedVariable": "warning"
+    //},
     "pyright.organizeimports.provider": "isort",
-    "pyright.inlayHints.enable": false,
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false,
     "pyright.testing.provider": "pytest",
-    "javascript.format.enabled": true,
-    "typescript.format.enabled": true,
+    //"javascript.format.enable": true, // the default
+    //"typescript.format.enable": true, // the default
     "languageserver": {
         "golang": {
             "command": "gopls",
